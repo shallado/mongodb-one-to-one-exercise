@@ -13,7 +13,9 @@ client.connect()
   .catch((error) => console.log(error));
 
 const db = client.db(dbName);
+const Customer = customerModel(db);
 
 module.exports = {
-  db
+  db,
+  Customer
 };
